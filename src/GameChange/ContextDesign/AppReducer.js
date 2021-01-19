@@ -15,11 +15,13 @@ export const AppReducer = (state, action) => {
           return user.id !== action.payload;
         }),
       };
+
     case "ADD_USER":
       return {
         // ...state,
         users: [action.payload, ...state.users],
       };
+
     case "EDIT_USER":
       const updateUser = action.payload;
       const updateUsers = state.users.map((user) => {
@@ -30,8 +32,6 @@ export const AppReducer = (state, action) => {
       });
       //Action
       return {
-        // ...state,
-
         users: updateUsers,
       };
 
