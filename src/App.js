@@ -14,6 +14,7 @@ import HomeDesign from "./GameChange/HomeDesign";
 import EditDesign from "./GameChange/EditDesign";
 import AddUsers from "./GameChange/AddUser";
 import { GlobalProvider } from "./GameChange/ContextDesign/GlobalState";
+import { PaystackHookExample } from "./GameChange/GiveDesign";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Switch>
               <Route exact path="/" component={View} />
               <Route exact path="/home_design" component={HomeDesign} />
+              <Route exact path="/payment" component={PaystackHookExample} />
               <Route exact path="/add_user" component={AddUsers} />
               <Route exact path="/edit/:id" component={EditDesign} />
               <Route exact path="/home" component={HomeScreen} />

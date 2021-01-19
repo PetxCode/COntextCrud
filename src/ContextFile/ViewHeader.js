@@ -1,3 +1,4 @@
+import { Button } from "antd";
 import { Header } from "antd/lib/layout/layout";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -11,19 +12,19 @@ const ViewHeader = () => {
           display: "flex",
           justifyContent: "space-around",
           fontWeight: "bold",
+          alignItems: "center",
         }}
       >
-        <div>
-          <Link
-            style={{
-              cursor: "pointer",
-              color: "white",
-            }}
-          >
-            {" "}
-            Users
-          </Link>
-        </div>
+        <Button
+          style={{
+            backgroundColor: "lightblue",
+            color: "white",
+            fontFamily: "Poppins",
+            textTransform: "uppercase",
+          }}
+        >
+          <Link to="/payment"> Donate </Link>
+        </Button>
         <div>
           <Link
             to="/add_user"
